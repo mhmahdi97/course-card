@@ -1,3 +1,4 @@
+import CourseCard from "./Components/CourseCard"
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
 
   return (
     <>
-      <h1 className="">Discount: {courseData[0].discountedPrice}</h1>
+      <CourseCard></CourseCard>
         
     </>
   )
