@@ -5,6 +5,7 @@ function App() {
 
   const courseData = [
     {
+      id: 1,
       name: 'This is a one line title',
       description: 'Two line paragraph Lorem ipsum dolor sit amet, consectetur',
       price: 1050,
@@ -12,6 +13,7 @@ function App() {
       discountedPrice: 800
     },
     {
+      id: 2,
       name: 'This is a one line title',
       description: 'Two line paragraph Lorem ipsum dolor sit amet, consectetur',
       price: 1050,
@@ -19,6 +21,7 @@ function App() {
       discountedPrice: null
     },
     {
+      id: 3,
       name: 'This is a one line title',
       description: 'Two line paragraph Lorem ipsum dolor sit amet, consectetur',
       price: null,
@@ -29,7 +32,16 @@ function App() {
 
   return (
     <>
-      <CourseCard></CourseCard>
+      <div className="w-full h-screen flex justify-center items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {
+            courseData.map(card => <CourseCard
+              key={card.id}
+            
+            ></CourseCard>)
+          }
+        </div>
+      </div>
         
     </>
   )
